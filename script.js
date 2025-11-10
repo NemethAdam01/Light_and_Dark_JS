@@ -1,6 +1,9 @@
+let theme = false
+
 function switchTheme() {
   // TODO: implement toggling the light/dark theme
   document.body.classList.add('bg-dark')
+
 
   const navbar = document.getElementById('navbar')
   navbar.classList.remove('navbar-light', 'bg-light')
@@ -25,4 +28,19 @@ function switchTheme() {
   footer.style.paddingLeft = '1700px'
   footer.style.display = 'block'
   footer.classList.add('text-white')
+
+  const h1_title = document.getElementById('h1_title')
+  h1_title.innerHTML = "This is the dark theme"
+  h1_title.classList.add('text-white')
+
+  const gomb = document.getElementById('themeSwitch')
+  gomb.innerHTML = "Activate Light Theme"
+
+    if (theme == false) {
+    navbar.classList.remove('navbar-dark', 'bg-dark')
+    navbar.classList.add('navbar-light', 'bg-light')
+
+
+  }
+  theme = !theme
 }
