@@ -37,8 +37,32 @@ function switchTheme() {
   gomb.innerHTML = "Activate Light Theme"
 
     if (theme == false) {
-    navbar.classList.remove('navbar-dark', 'bg-dark')
-    navbar.classList.add('navbar-light', 'bg-light')
+      h1_title.innerHTML = "This is the light theme"
+      h1_title.classList.remove("text-white")
+      h1_title.classList.add("text-black")
+      gomb.innerHTML = "Activate Dark Theme"
+      document.body.classList.remove('bg-dark')
+      document.body.classList.add('bg-light')
+      navbar.classList.remove('navbar-dark', 'bg-dark')
+      navbar.classList.add('navbar-light', 'bg-light')
+      cards.forEach(card => {
+      card.classList.remove('text-white', 'bg-dark', 'border-light')
+      })
+      cards.forEach(card => {
+      card.classList.add('text-black', 'bg-light', 'border-dark')
+      })
+      tables.forEach(table => {
+      table.classList.remove('table-dark')
+      })
+      tables.forEach(table => {
+      table.classList.add('table-light')
+      })
+      cols.forEach(col => {
+      col.classList.add('col')
+      })
+
+
+
 
 
   }
